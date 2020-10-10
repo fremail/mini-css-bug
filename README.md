@@ -8,6 +8,8 @@ Steps to reproduce:
 
 In this case it will use mini-css-extract-plugin v0.5 and css-loader v4.3.
 
+**Scroll to the end to see a real solution.**
+
 # The error
 
 ```
@@ -44,3 +46,8 @@ Another way to "fix" the issue -- downgrade css-loader to v3.6:
 1. `npm i css-loader@3`
 2. `npm run storybook_build`
 3. 🍾
+
+# Real solution
+
+Update `mini-css-extract-plugin` to v1 and `style-loader` to v2. Then `css-loader` v4 will work fine with them! 
+[Related issue](https://github.com/webpack-contrib/mini-css-extract-plugin/issues/205#issuecomment-706277039).
